@@ -54,11 +54,7 @@ headers = [('authority': 'x.com',
     "sec-fetch-user": "?1",
     "upgrade-insecure-requests": "1",
     "Referer": "https://twitter.com/",
-    "Referrer-Policy": "strict-origin-when-cross-origin"
-  }
-  "body": null,
-  "method": "GET"
-})
+    "Referrer-Policy": "strict-origin-when-cross-origin"}
 
 username = input('\033[1;37muser : \033[1;37m')
 passwordList = input('\033[1;37mpassword : \033[1;37m')
