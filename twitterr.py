@@ -40,7 +40,8 @@ b.set_handle_referer(True)
 b.set_handle_robots(False)
 b._factory.is_html = True
 
-headers = [('authority': 'x.com',
+fetch("https://x.com/", {
+  "headers": {
     "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
     "accept-language": "en-GB,en-US;q=0.9,en;q=0.8,eu;q=0.7,ar;q=0.6",
     "cache-control": "max-age=0",
@@ -53,8 +54,10 @@ headers = [('authority': 'x.com',
     "sec-fetch-site": "same-origin",
     "sec-fetch-user": "?1",
     "upgrade-insecure-requests": "1",
-    "Referer": "https://twitter.com/",
-    "Referrer-Policy": "strict-origin-when-cross-origin")
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET"
+});
 
 username = input('\033[1;37muser : \033[1;37m')
 passwordList = input('\033[1;37mpassword : \033[1;37m')
